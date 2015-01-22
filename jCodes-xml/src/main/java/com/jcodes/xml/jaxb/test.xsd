@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by user (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="VMTemplate" type="Template">
+		<xs:annotation>
+			<xs:documentation>Virtual Machine Template</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ServerTemplate" type="Template">
+		<xs:annotation>
+			<xs:documentation>Physical Machine Template</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="Template">
+		<xs:all>
+			<xs:element name="TemplateID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Virtual Machine Template Id
+						(eg.CIDC-T-VM-00000001)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ResourceType" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Resource Type (eg.CIDC-RT-VM)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MeasureMode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Measure Mode (eg.Duration)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TemplateDesc" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Virtual Machine Template Description
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TemplateStatus" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TemplateCreator" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Template Creator
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CreateTime" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Create Time(eg.2011-05-24 08:55:30)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ResourceInfo" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Resource Information
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
