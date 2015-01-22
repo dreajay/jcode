@@ -1,0 +1,25 @@
+log4j.rootCategory=DEBUG, console
+
+
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+##target:System.out,System.err
+log4j.appender.console.target=System.out
+log4j.appender.console.encoding=GBK
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=[%d{yyyy-MM-dd HH\:mm\:ss}][%5p][%5t] %m%n
+
+
+log4j.appender.file=com.dreajay.util.log4j.socketAppender.GroupRollingFileAppender
+log4j.appender.file.Path=D:/logs/
+#log4j.appender.file.Append=true
+log4j.appender.serverFile.encoding=UTF-8
+log4j.appender.file.MaxFileSize=5kb
+log4j.appender.file.MaxBackupDays=5
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.ConversionPattern=[%-23d{yyyy-MM-dd HH:mm:ss.S}][%-5p][%x][%t][\u5e73\u53f0\u6d41\u6c34\u53f7][\u5904\u7406\u7801]%n[%l]%n%m%n
+
+log4j.appender.localFile=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.localFile.DatePattern='.'yyyy-MM-dd
+log4j.appender.localFile.File=D:/logs/generic.log
+log4j.appender.localFile.layout=org.apache.log4j.PatternLayout
+log4j.appender.localFile.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss}, %p %m %n
