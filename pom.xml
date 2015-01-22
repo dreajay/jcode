@@ -18,12 +18,24 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
   <modules>
-  	<module>jms</module>
-    <module>log4j</module>
+  	<module>jCodes-jms</module>
+    <module>jCodes-log4j</module>
+    <module>jCodes-algorithm</module>
+    <module>jCodes-webservice</module>
+    <module>jCodes-webservice-client</module>
+    <module>jCodes-xml</module>
+    <module>jCodes-javaweb</module>
+    <module>jCodes-webservice-cxf</module>
+    <module>jCodes-ganymed-ssh2</module>
+    <module>jCodes-mina</module>
+    <module>jCodes-ognl</module>
+    <module>jCodes-nio</module>
+    <module>jCodes-memoryAnalysis</module>
+    <module>jCodes-javase</module>
   </modules>
 </project>
