@@ -37,11 +37,13 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		System.out.println("login...username="+username+",password="+password);
-		if(username != null) {
+		if(username != null && !"".equals(username)) {
 			request.getSession().setAttribute(SessionConstant.USER, username);
-			request.getRequestDispatcher("/index.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 		} else {
-			response.sendRedirect("/login.jsp");
+			request.setAttribute("errMsg", "用户名或密码不正确！");
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+
 		}
 	}
 

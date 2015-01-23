@@ -10,7 +10,7 @@
 <h3>这是动态引入界面的内容</h3>
 
 <%
-	Thread.sleep(1000 * 3);
-
+	Thread.sleep(2000);
+	
 	System.out.println("jsp include page complete....");
 %>
