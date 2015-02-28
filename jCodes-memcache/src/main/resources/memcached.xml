@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memcached>
+	<client name="mclient1" compressEnable="true" defaultEncoding="UTF-8"
+		socketpool="pool1">
+		<errorHandler>com.alisoft.xplatform.asf.cache.memcached.MemcachedErrorHandler
+		</errorHandler>
+	</client>
+	<socketpool name="pool1" failover="true" initConn="10"
+		minConn="50" maxConn="1024" maintSleep="0" nagle="false" socketTO="3000"
+		aliveCheck="true">
+		<servers>192.168.1.105:11211</servers>
+	</socketpool>
+</memcached>
